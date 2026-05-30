@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Flickr Video Dönüştürücü: Flickr video indiricimizi kullanarak herhangi bir videoyu veya GIF'i indirebilir, MP3 veya GIF formatına dönüştürebilirsiniz. Daha ne bekliyorsunuz? Flickr video indiricimizi şimdi deneyin!">
+<meta name="keywords" content="Flickr video indirici, Flickr video indir, Flickr video download">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="Flickr Video İndirici — Flickr'dan Video ve GIF Alın">
+<meta name="twitter:description" content="Flickr Video İndirici: Herhangi bir videoyu veya GIF'i indirin ve MP3 veya GIF formatına dönüştürün. Hemen şimdi deneyin!">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png">
+<meta name="twitter:image:alt" content="Flickr Video İndirici — Flickr'dan Video ve GIF Alın">
+
+<meta property="og:title" content="Flickr Video İndirici — Flickr'dan Video ve GIF Alın" />
+<meta property="og:description" content="Flickr Video İndirici: Flickr videolarını ve GIF'lerini indirin, MP3 veya GIF formatına kolayca dönüştürün. Hızlı ve ücretsiz!" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png" />
+<meta property="og:image:alt" content="Flickr Video İndirici — Flickr'dan Video ve GIF Alın" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>Flickr Video İndirici — Flickr'dan Video ve GIF Alın</title>
+</head>
+
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0063dc 0%, #0063dc 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.15)"/><circle cx="80" cy="40" r="2" fill="rgba(255,255,255,0.15)"/><circle cx="40" cy="80" r="4" fill="rgba(255,255,255,0.15)"/></svg>');
+            animation: pulse 15s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .intro-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .intro-section h2 {
+            color: #0063dc;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .intro-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 99, 220, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.15);
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: linear-gradient(135deg, #0063dc, #00b8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .feature-card h3 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tutorial-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .tutorial-section h2 {
+            color: #0063dc;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .tutorial-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 25px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 99, 220, 0.1);
+        }
+
+        .step:hover {
+            box-shadow: 0 5px 15px rgba(0, 99, 220, 0.1);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 99, 220, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .step-content p {
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .step-content strong {
+            color: #0063dc;
+        }
+
+        .step-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .step-content li {
+            margin-bottom: 8px;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .step-content li::before {
+            content: "•";
+            color: #00b8ff;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .screenshot {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 99, 220, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 99, 220, 0.1);
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .tip-box {
+            background: linear-gradient(to right, rgba(227, 242, 253, 0.7), rgba(187, 222, 251, 0.5));
+            border-left: 4px solid #0063dc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .tip-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 99, 220, 0.1);
+        }
+
+        .tip-box h4 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-box p {
+            color: #333;
+        }
+
+        .warning-box {
+            background: linear-gradient(to right, rgba(255, 243, 224, 0.7), rgba(255, 224, 178, 0.5));
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .warning-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.1);
+        }
+
+        .warning-box h4 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box p {
+            color: #333;
+        }
+
+        .faq-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .faq-section h2 {
+            color: #0063dc;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .faq-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(0, 99, 220, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-bottom-color: rgba(0, 99, 220, 0.3);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #00b8ff;
+        }
+
+        .faq-answer {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .faq-answer a {
+            color: #0063dc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .faq-answer a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0063dc;
+            transition: width 0.3s;
+        }
+
+        .faq-answer a:hover {
+            color: #00b8ff;
+        }
+
+        .faq-answer a:hover::after {
+            width: 100%;
+            background: #00b8ff;
+        }
+
+        .download-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 99, 220, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .download-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #00b8ff 0%, #0063dc 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.4);
+        }
+
+        .download-btn:hover::before {
+            opacity: 1;
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1a2a4a 0%, #0d1a2f 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="3" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: pulse 20s infinite;
+        }
+
+        footer p {
+            position: relative;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        footer p:hover {
+            opacity: 1;
+        }
+
+        footer a {
+            color: #00b8ff;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        footer a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00b8ff;
+            transition: width 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .video-demo {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .video-demo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 99, 220, 0.2);
+        }
+
+        .video-demo iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 99, 220, 0.3);
+            z-index: 100;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .intro-section,
+            .tutorial-section,
+            .faq-section {
+                padding: 25px;
+                margin: 20px 0;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto 15px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .video-demo iframe {
+                height: 250px;
+            }
+
+            .download-btn {
+                padding: 14px 30px;
+                font-size: 1.1rem;
+                display: block;
+                margin: 15px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+
+            .step-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .intro-section h2,
+            .tutorial-section h2,
+            .faq-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .video-demo iframe {
+                height: 200px;
+            }
+
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        .collapsible {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .collapsible-content {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .collapsible-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .collapsible::after {
+            content: "▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        .collapsible.active::after {
+            transform: rotate(180deg);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #0063dc;
+            transition: all 0.3s;
+        }
+
+        .highlight:hover {
+            background: linear-gradient(120deg, #bbdefb 0%, #90caf9 100%);
+        }
+    </style>
+<div class="container-fluid text-break">
+<div class="row" style="background: linear-gradient(to bottom, #ff0084 0%, #0063dc 100%);">
+<div class="row" >
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='site logo'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+	
+	<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+		<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+			<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>Anasayfa</a>&nbsp;&nbsp;</li>
+
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="fa-solid fa-video"></i>
+					<span>Video İndirici</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{toollistele|safe}}
+					</ul>
+				</div>&nbsp;&nbsp;
+			</div>
+			
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="bi bi-globe"></i>
+					<span>🇹🇷 Türkçe</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{langlistele|safe}}
+					</ul>
+				</div>
+			</div>
+		</ul>
+	 </div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+	
+		<br />
+		<div id='titleweb'  style='text-align:center;color:#2D3E50' >
+			<h1 style='font-family: "Tektur",sans-serif;'>🎬 Flickr Video İndirici</h1>
+			<p >Ücretsiz, hızlı ve güvenli çevrimiçi Flickr video indirme aracı</p>
+		</div> 
+		<div id='ad' >
+		</div>
+		<div style='text-align:center'>
+		
+		<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="https://www.flickr.com/photos/..." >
+		</div>
+		<div style='text-align:center;color:#2D3E50'>
+		Örnek URL: https://www.flickr.com/photos/....
+		</div>
+		<br/>
+		<div style='text-align:center'>
+		<button type="button" class="btn" id='bigbutton' style='background-color:#FF6B35;color:white'> 🔍 Videoyu Çözümle</button>
+		
+
+		</div>
+		<br/>
+		
+		<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+			<span class="visually-hidden">İndiriliyor...</span>
+		</div>
+		
+		<div class=""  id='hashshow' style='color:#2D3E50'>
+		</div> 
+		<br />
+		
+		
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+	
+
+
+
+    <main class="container">
+        <!-- 介绍部分 -->
+        <section class="intro-section">
+            <h2>📖 Ürün Tanıtımı</h2>
+            <p>Flickr Video İndirici, Flickr kullanıcıları için özel olarak tasarlanmış çevrimiçi bir video indirme aracıdır. Herhangi bir yazılım yüklemeniz veya hesap kaydetmeniz gerekmez, Flickr'daki harika video içeriklerini kolayca indirebilirsiniz.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Ultra Hızlı İndirme</h3>
+                    <p>En yeni indirme teknolojisini kullanarak, video indirme hızının bir adım önde olmasını sağlar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Güvenlik & Gizlilik</h3>
+                    <p>Tam süreç HTTPS şifrelemesi, kullanıcı verileri kaydetmez, gizliliğinizi ve güvenliğinizi korur</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Çapraz Platform Desteği</h3>
+                    <p>PC, mobil, tablet ve diğer çeşitli cihazları mükemmel şekilde destekler, istediğiniz zaman ve yerde indirin</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Basit ve Kullanımı Kolay</h3>
+                    <p>İndirmeyi tamamlamak için sadece üç adım gerekir, teknik arka plan gerekmez, yaşlı ve genç herkes için uygundur</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Dostça İpuçları</h4>
+                <p>Bu araç tamamen ücretsizdir ve indirme sayısında sınırsızdır. Lütfen makul bir şekilde kullanın, orijinal yazarın telif hakkını ve emeğini saygıyla karşılayın.</p>
+            </div>
+        </section>
+
+        <!-- 使用教程 -->
+        <section class="tutorial-section">
+            <h2>📝 Kullanım Kılavuzu</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>İndirmek istediğiniz Flickr videosunu bulun</h3>
+                    <p>Öncelikle <a href="https://www.flickr.com " target="_blank">Flickr.com</a> adresini ziyaret edin ve indirmek istediğiniz videoyu bulun. Arama özelliğini veya albümleri gezerek videoyu konumlandırabilirsiniz.</p>
+                    <div class="screenshot">
+                        
+                        <p><em>Şekil 1: Flickr video oynatma sayfası örneği</em></p>
+                    </div>
+                    <div class="warning-box">
+                        <h4>⚠️ Dikkat Edilmesi Gerekenler</h4>
+                        <p>Lütfen videonun herkese açık ve görülebilir olduğundan emin olun, özel videolar indirilemez. Aynı zamanda lütfen video oluşturucunun telif hakkını saygıyla karşılayın ve yalnızca yetkili içerikleri indirin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Video sayfasının URL'sini kopyalayın</h3>
+                    <p>Video oynatma sayfasında, tarayıcı adres çubuğundaki tam URL bağlantısını kopyalayın. URL formatı genellikle şöyledir:</p>
+                    <ul>
+                        <li><code class="highlight">https://www.flickr.com/photos/username/123456789 </code></li>
+                        <li><code class="highlight">https://flic.kr/p/abc123 </code></li>
+                    </ul>
+                    <div class="screenshot">
+                       
+                        <p><em>Şekil 2: Tarayıcı adres çubuğundaki video URL'sini kopyalama</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 Küçük İpuçları</h4>
+                        <p>PC'de: Adres çubuğuna tıklayın ve Ctrl+C (Windows) veya Cmd+C (Mac) ile kopyalayın<br/>
+                        Mobil cihazda: Adres çubuğuna uzun basın ve "Kopyala" seçeneğini seçin</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>URL'yi indirme kutusuna yapıştırın</h3>
+                    <p>Bu sayfaya geri dönün ve kopyalanan Flickr video URL'sini aşağıdaki indirme kutusuna yapıştırın:</p>
+                    <div class="screenshot">
+                        
+                        <p><em>Şekil 3: Flickr video URL'sini indirme kutusuna yapıştırma</em></p>
+                    </div>
+
+                    <p style="margin-top: 10px;">Tüm Flickr video bağlantısı formatlarını destekler, video bilgilerini otomatik olarak tanır ve çıkarır.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Video kalitesini seçin ve indirin</h3>
+                    <p>Sistem videoyu otomatik olarak analiz edecek ve çeşitli kalite seçenekleri sağlayacaktır:</p>
+                    <ul>
+                        <li><strong>HD (Yüksek Çözünürlük):</strong> en iyi görüntü kalitesi, daha büyük dosya</li>
+                        <li><strong>SD (Standart Çözünürlük):</strong> görüntü kalitesi ve dosya boyutu arasında denge</li>
+                        <li><strong>AKIŞ (FLV):</strong> en küçük dosya, mobil cihazlar için uygun</li>
+                    </ul>
+                    <div class="screenshot">
+                       
+                        <p><em>Şekil 4: Uygun video kalitesi seçeneğini seçin</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 Öneri</h4>
+                        <p>Düzenleme veya koleksiyon için HD kalitesi önerilir; hızlı paylaşım veya mobil cihaz izleme için SD veya AKIŞ kalitesi daha uygundur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Videoyu cihazınıza kaydedin</h3>
+                    <p>İndirme düğmesine tıkladıktan sonra, tarayıcı ayarlarınıza göre:</p>
+                    <ul>
+                        <li><strong>PC kullanıcıları:</strong> kaydetme konumunu seçin ve "Kaydet"e tıklayın</li>
+                        <li><strong>Mobil kullanıcılar:</strong> video albüme veya indirme klasörüne kaydedilecektir</li>
+                    </ul>
+                    <div class="screenshot">
+                        
+                        <p><em>Şekil 5: Kaydetme konumunu seçin ve indirmeyi tamamlayın</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 İndirme tamamlandıktan sonra</h4>
+                        <p>İndirme tamamlandıktan sonra, herhangi bir video oynatıcı ile izleyebilir veya video düzenleme yazılımına aktarıp ikincil oluşturma yapabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+		<section class="faq-section">
+            <h2>❓ Sıkça Sorulan Sorular (SSS)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: Flickr videolarını indirmek yasal mı?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: Flickr videolarını indirmenin yasallığı, videonun telif hakkına bağlıdır. Bu araç yalnızca kişisel öğrenme ve yedekleme amaçlıdır. Lütfen şu ilkelere uyun:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Yalnızca herkese açık ve erişim yetkiniz olan videoları indirin</li>
+                            <li>Ticari amaçlarla kullanmayın</li>
+                            <li>Orijinal içerik oluşturucunun telif haklarına saygı gösterin</li>
+                            <li>Flickr hizmet şartlarına uyun</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: Bazı videolar neden indirilemiyor?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: Olası nedenler şunlardır:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Video "Gizli" veya şifre korumalı olarak ayarlanmış olabilir</li>
+                            <li>Video silinmiş veya bağlantı geçersiz olabilir</li>
+                            <li>İnternet bağlantısı kararsız olabilir</li>
+                            <li>Flickr sitesinde geçici bakım çalışması olabilir</li>
+                        </ul>
+                        <p style="margin-top: 10px;">Öneri: Video bağlantısının doğru olduğunu kontrol edin, internetinizi kontrol edin veya daha sonra tekrar deneyin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: İndirilen videolarda filigran (watermark) var mı?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: Hayır. Bu araç, Flickr'daki orijinal video dosyasını doğrudan indirir; videoya herhangi bir filigran veya işaret eklemez. Flickr'da gördüğünüz kalitenin aynısını elde edersiniz.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: Toplu indirme destekleniyor mu?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: Mevcut sürüm henüz toplu indirmeyi desteklememektedir. Video bağlantılarını tek tek kopyalayıp indirmeniz gerekir. Toplu indirme özelliği geliştirme aşamasındadır, takipte kalın!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: İndirilen videolar hangi formatta?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: Flickr videoları genellikle şu formatlarda sunulur:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>MP4 Formatı:</strong> En yaygın ve uyumluluğu en yüksek olan</li>
+                            <li><strong>MOV Formatı:</strong> Bazı HD videolar bu formatta olabilir</li>
+                            <li><strong>FLV Formatı:</strong> Daha eski videolar bu formatta olabilir</li>
+                        </ul>
+                        <p style="margin-top: 10px;">İndirme sırasında, çeşitli cihazlarda sorunsuz oynatabilmeniz için en uygun formatı otomatik olarak seçiyoruz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: İndirme hızı düşükse ne yapmalıyım?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: İndirme hızı şu faktörlerden etkilenebilir:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>İnternet bağlantı hızınız</li>
+                            <li>Flickr sunucu yükü</li>
+                            <li>Video dosya boyutu</li>
+                            <li>Aynı anda gerçekleştirilen indirme sayısı</li>
+                        </ul>
+                        <p style="margin-top: 10px;">Öneri: Daha düşük bir video kalitesi seçin veya ağ durumunuz daha iyi olduğunda indirin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-section">
+            <h2>📋 Kullanım Şartları</h2>
+            <p>Bu aracı kullanarak aşağıdaki şartları kabul etmiş sayılırsınız:</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>Bu araç yalnızca kişisel ve ticari olmayan kullanım içindir</li>
+                <li>İndirilen içeriğin yasallığından kullanıcı sorumludur</li>
+                <li>Herhangi bir indirme kaydı veya kullanıcı verisi saklamıyoruz</li>
+                <li>Hizmet, bakım veya politika değişiklikleri nedeniyle her an düzenlenebilir</li>
+                <li>Yanlış kullanımdan doğan yasal sorunlardan sorumluluk kabul edilmez</li>
+            </ul>
+            <div class="warning-box">
+                <h4>⚠️ Sorumluluk Reddi</h4>
+                <p>Bu araç, kullanıcıların kendi içeriklerini yedeklemelerine veya kamuya açık yetkili videoları indirmelerine yardımcı olmak için tasarlanmıştır. Herhangi bir telif hakkı ihlali bu araçla ilişkilendirilemez. Lütfen bu hizmeti yasalara uygun kullanın.</p>
+            </div>
+        </section>
+
+        <section class="tutorial-section">
+            <h2>📞 İletişim</h2>
+            <p>Soru veya önerileriniz için bizimle aşağıdaki kanallardan iletişime geçebilirsiniz:</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>📧 E-posta: <a href="{{mailtocontactmail}}">{{contactmail}}</a></li>
+                <li>💬 Canlı Destek: Hafta içi 09:00-18:00</li>
+                <li>📱 WeChat: FlickrVideoDownloader</li>
+                <li>🐛 Geri Bildirim: <a href="#" onclick="alert('Geri bildirim özelliği yapım aşamasında, lütfen e-posta yoluyla iletişime geçin')">Hata bildirimi gönder</a></li>
+            </ul>
+            <div class="tip-box">
+                <h4>💡 Geri Bildirimlerinize Önem Veriyoruz</h4>
+                <p>Görüş ve önerileriniz gelişimimiz için temel motivasyondur. Herhangi bir fikriniz varsa bizimle paylaşmaktan çekinmeyin!</p>
+            </div>
+        </section>
+    </main>
+
+		<footer class="footer">
+				<p>© {{year_string}} Flickr Video Downloader. Tüm hakları saklıdır.</p>
+				<p>Bu sitenin Flickr, Inc. ile resmi bir bağı yoktur | 
+				<a href="/privacy-policy" style="color: white;">Gizlilik Politikası</a> | 
+				<a href="/terms-of-service" style="color: white;">Kullanım Koşulları</a> | 
+				<a href="/about-us" style="color: white;">Hakkımızda</a> | 
+				<a href="/contact-us" style="color: white;">Bize Ulaşın</a>
+				</p>
+				<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+					Bu araç yalnızca kişisel öğrenme ve araştırma amaçlıdır; tüm yasal sorumluluk kullanıcıya aittir.
+				</p>
+				<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+					Telif hakkıyla korunan içeriklerin indirilmesi ilgili yasa ve yönetmelikleri ihlal edebilir, lütfen yerel yasalarınızın gerektirdiklerine uyun.
+				</p>
+				<div id='fp' fp style='display:none'></div> 
+		</footer>
+	
+
+    
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+{{thumbjsele|safe}}
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+
+<script>
+     // FAQ折叠功能
+     function toggleFaq(element) {
+         const content = element.nextElementSibling;
+         element.classList.toggle('active');
+         content.classList.toggle('active');
+     }
+     // 响应式导航菜单（移动端）
+     function toggleMobileMenu() {
+         const menu = document.querySelector('.mobile-menu');
+         menu.classList.toggle('active');
+     }
+</script>
+
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />Converting Video to Mp3</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('NO result');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">Download Video Mp3</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />Converting Video to Gif</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('NO result');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">Download Video GIF</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />Video getiriliyor</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+	var fp = $('#fp').attr("fp");
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_flickr', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue+'&fp='+fp);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('NO result');
+				return;
+				}
+				
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);//
+				
+				var v_title=response.v_title;//
+				var v_webpage_url=encodeURI(response.v_webpage_url);//
+				var v_duration_string=response.v_duration_string;//
+				
+				//var v_uploader_id=response.v_uploader_id;
+				//var v_uploader=response.v_uploader;
+				var v_uploader_url=encodeURI(response.v_uploader_url);//
+				var v_view_count=response.v_view_count;//
+				//var v_like_count=response.v_like_count;
+				var v_comment_count=response.v_comment_count;//
+				//var v_repost_count=response.v_repost_count;
+				//var v_width=response.v_width;
+				//var v_height=response.v_height;
+				
+				var v_upload_date=response.v_upload_date;//
+				var v_ext=response.v_ext;//
+				var v_resolution=response.v_resolution;//
+				//var v_aspect_ratio=response.v_aspect_ratio;
+				var v_des=response.v_des;//
+				//var v_url=response.v_url;
+				
+				var v_formats = response.formatslist;//
+				//var v_thumbnails =response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			// var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+v_url+'">Videoyu İndir</a></div>';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+			
+				turl=encodeURI(v_formats[i][0]);
+				tres=v_formats[i][1];
+				// Çeviri: Videoyu İndir (çözünürlük ...)
+				var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+turl+'">Videoyu İndir (çözünürlük '+tres+')</a></div>';
+			}
+			
+			// Kapak fotoğrafı indirme kısmı (aktif edilirse):
+			// var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">Kapağı İndir (çözünürlük '+tres+')</a></div>';
+			
+			var intext=intext+'</div></div><hr />';
+	
+			// 1. Sütun: Temel Bilgiler
+			var intext=intext+'<div class="row" ><div class="col-sm-6" >' +
+				'<div><b>Başlık: </b>'+v_title+'</div>' +
+				'<div><b>Web Bağlantısı: </b>'+v_webpage_url+'</div>' +
+				'<div><b>Süre: </b>'+v_duration_string+'</div>' +
+				'<div><b>Yükleyici Bağlantısı: </b>'+v_uploader_url+'</div>' +
+				'<div><b>Yükleme Tarihi: </b>'+v_upload_date+'</div>' +
+				'<div><b>İzlenme Sayısı: </b>'+v_view_count+'</div></div>';
+	
+			// 2. Sütun: Teknik Detaylar
+			var intext=intext+'<div class="col-sm-6" >' +
+				'<div><b>Yorum Sayısı: </b>'+v_comment_count+'</div>' +
+				'<div><b>Dosya Formatı: </b>'+v_ext+'</div>' +
+				'<div><b>Çözünürlük: </b>'+v_resolution+'</div></div></div>';
+
+			// Video Açıklaması
+			var intext=intext+'<div class="row" ><div class="col-sm-12" ><div><b>Video Açıklaması: </b>'+v_des+'</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="Flickr " data-title="'+v_title+'"><span  style="font-size:1em“>Flickr </span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>

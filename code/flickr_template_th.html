@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta name="msvalidate.01" content="5CCC6EE8FF816477D80A4DE459A738F1" />
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr: คุณสามารถใช้เครื่องมือดาวน์โหลดวิดีโอ Flickr ของเราเพื่อดาวน์โหลดวิดีโอหรือ GIF ใดก็ได้ และแปลงเป็นรูปแบบ MP3 หรือ GIF รออะไรอยู่? ลองใช้เครื่องมือดาวน์โหลดวิดีโอ Flickr ของเราเลย!">
+<meta name="keywords" content="ดาวน์โหลดวิดีโอ Flickr, โปรแกรมดาวน์โหลดวิดีโอ Flickr, โหลดวิดีโอจาก Flickr">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@twittervideodownloaderx.com">
+<meta name="twitter:title" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr — ดาวน์โหลดวิดีโอและ GIF จาก Flickr">
+<meta name="twitter:description" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr: ดาวน์โหลดวิดีโอหรือ GIF ใดก็ได้ และแปลงเป็นรูปแบบ MP3 หรือ GIF ลองใช้เลยตอนนี้!">
+<meta name="twitter:image" content="https://twittervideodownloaderx.com/static/logo.png">
+<meta name="twitter:image:alt" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr — ดาวน์โหลดวิดีโอและ GIF จาก Flickr">
+
+<meta property="og:title" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr — ดาวน์โหลดวิดีโอและ GIF จาก Flickr" />
+<meta property="og:description" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr: ดาวน์โหลดวิดีโอหรือ GIF จาก Flickr และแปลงเป็น MP3 หรือ GIF ได้ง่ายๆ รวดเร็วและฟรี!" />
+<meta property="og:image" content="https://twittervideodownloaderx.com/static/logo.png" />
+<meta property="og:image:alt" content="เครื่องมือดาวน์โหลดวิดีโอ Flickr — ดาวน์โหลดวิดีโอและ GIF จาก Flickr" />
+
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+<link href="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://gcore.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/wait.css" >
+<link rel="stylesheet" href="/static/shareon.min.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+{{websiteSchema|safe}}
+
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<title>เครื่องมือดาวน์โหลดวิดีโอ Flickr — ดาวน์โหลดวิดีโอและ GIF จาก Flickr</title>
+</head>
+
+
+<body>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0063dc 0%, #0063dc 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="rgba(255,255,255,0.15)"/><circle cx="80" cy="40" r="2" fill="rgba(255,255,255,0.15)"/><circle cx="40" cy="80" r="4" fill="rgba(255,255,255,0.15)"/></svg>');
+            animation: pulse 15s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .intro-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .intro-section h2 {
+            color: #0063dc;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .intro-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 99, 220, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.15);
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: linear-gradient(135deg, #0063dc, #00b8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .feature-card h3 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tutorial-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .tutorial-section h2 {
+            color: #0063dc;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .tutorial-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 25px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 99, 220, 0.1);
+        }
+
+        .step:hover {
+            box-shadow: 0 5px 15px rgba(0, 99, 220, 0.1);
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 99, 220, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .step-content p {
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .step-content strong {
+            color: #0063dc;
+        }
+
+        .step-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .step-content li {
+            margin-bottom: 8px;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .step-content li::before {
+            content: "•";
+            color: #00b8ff;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .screenshot {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 99, 220, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 99, 220, 0.1);
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .tip-box {
+            background: linear-gradient(to right, rgba(227, 242, 253, 0.7), rgba(187, 222, 251, 0.5));
+            border-left: 4px solid #0063dc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .tip-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 99, 220, 0.1);
+        }
+
+        .tip-box h4 {
+            color: #0063dc;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-box p {
+            color: #333;
+        }
+
+        .warning-box {
+            background: linear-gradient(to right, rgba(255, 243, 224, 0.7), rgba(255, 224, 178, 0.5));
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .warning-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.1);
+        }
+
+        .warning-box h4 {
+            color: #ff9800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box p {
+            color: #333;
+        }
+
+        .faq-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .faq-section h2 {
+            color: #0063dc;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .faq-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #0063dc, #00b8ff);
+            border-radius: 2px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(0, 99, 220, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-bottom-color: rgba(0, 99, 220, 0.3);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #0063dc;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #00b8ff;
+        }
+
+        .faq-answer {
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .faq-answer a {
+            color: #0063dc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .faq-answer a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0063dc;
+            transition: width 0.3s;
+        }
+
+        .faq-answer a:hover {
+            color: #00b8ff;
+        }
+
+        .faq-answer a:hover::after {
+            width: 100%;
+            background: #00b8ff;
+        }
+
+        .download-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 99, 220, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .download-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #00b8ff 0%, #0063dc 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.4);
+        }
+
+        .download-btn:hover::before {
+            opacity: 1;
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1a2a4a 0%, #0d1a2f 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="3" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: pulse 20s infinite;
+        }
+
+        footer p {
+            position: relative;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        footer p:hover {
+            opacity: 1;
+        }
+
+        footer a {
+            color: #00b8ff;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        footer a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00b8ff;
+            transition: width 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .video-demo {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .video-demo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 99, 220, 0.2);
+        }
+
+        .video-demo iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #0063dc 0%, #00b8ff 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 99, 220, 0.3);
+            z-index: 100;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 99, 220, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .intro-section,
+            .tutorial-section,
+            .faq-section {
+                padding: 25px;
+                margin: 20px 0;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto 15px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .video-demo iframe {
+                height: 250px;
+            }
+
+            .download-btn {
+                padding: 14px 30px;
+                font-size: 1.1rem;
+                display: block;
+                margin: 15px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+
+            .step-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .intro-section h2,
+            .tutorial-section h2,
+            .faq-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .video-demo iframe {
+                height: 200px;
+            }
+
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        .collapsible {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .collapsible-content {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .collapsible-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .collapsible::after {
+            content: "▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        .collapsible.active::after {
+            transform: rotate(180deg);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #0063dc;
+            transition: all 0.3s;
+        }
+
+        .highlight:hover {
+            background: linear-gradient(120deg, #bbdefb 0%, #90caf9 100%);
+        }
+    </style>
+
+<div class="container-fluid text-break">
+<div class="row" style="background: linear-gradient(to bottom, #ff0084 0%, #0063dc 100%);">
+<div class="row" >
+    <div class="col-sm-2 d-none d-sm-block" >
+    </div>
+	<div class="col-sm-4 align-self-end"  >
+		<a href='https://twittervideodownloaderx.com' style="text-decoration:none"><img  data-src='/static/logo.png' src='/static/pix.jpg' class="img-fluid lazy align-text-bottom" alt='site logo'><span  class='align-text-bottom text-wrap fs-3' style="font-style:italic;color:white;font-family:'Tektur',sans-serif;">Twittervideodownloaderx</span></a>
+    </div>
+	
+	
+<div class="col-sm-4 d-flex justify-content-end align-items-center" id="webdes">
+		<ul  style='padding-top:25px;color:white'  class="nav nav-tabs" >
+			<li style='display:inline;'><a href='https://twittervideodownloaderx.com' style='text-decoration: none;color:white'>หน้าแรก</a>&nbsp;&nbsp;</li>
+
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="fa-solid fa-video"></i>
+					<span>ตัวดาวน์โหลดวิดีโอ</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{toollistele|safe}}
+					</ul>
+				</div>&nbsp;&nbsp;
+			</div>
+			
+			<div class="text-end mb-3">
+				<div class="dropdown d-inline-block">
+					<button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1"
+							type="button"
+							id="langDropdown"
+							data-bs-toggle="dropdown"
+							aria-expanded="false">
+					<i class="bi bi-globe"></i>
+					<span>🇹🇭 ไทย</span>
+					</button>
+			
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						{{langlistele|safe}}
+					</ul>
+				</div>
+			</div>
+		</ul>
+	 </div>
+	<div class="col-sm-2" id='langweb' >
+	</div>
+</div>
+<div class="row" >
+    <div class="col-md-2 d-none d-md-block">
+    </div> 
+    <div class="col-md-8"  style="border-width:1px;border-style: solid;background-color:#F5F7FA">
+	
+		<br />
+		<div id='titleweb'  style='text-align:center;color:#2D3E50' >
+			<h1 style='font-family: "Tektur",sans-serif;'>🎬 เครื่องมือดาวน์โหลดวิดีโอ Flickr</h1>
+			<p >เครื่องมือดาวน์โหลดวิดีโอ Flickr ออนไลน์ที่ฟรี รวดเร็ว และปลอดภัย</p>
+		</div> 
+		<div id='ad' >
+		</div>
+		<div style='text-align:center'>
+		
+		<input type='text' id='mainsource' style='width:80%;display:inline;color:#2D3E50' placeholder="https://www.flickr.com/photos/..." >
+		</div>
+		<div style='text-align:center;color:#2D3E50'>
+		ตัวอย่าง URL : https://www.flickr.com/photos/....
+		</div>
+		<br/>
+		<div style='text-align:center'>
+		<button type="button" class="btn" id='bigbutton' style='background-color:#FF6B35;color:white'> 🔍 วิเคราะห์วิดีโอ</button>
+		
+
+		</div>
+		<br/>
+		
+		<div class="spinner-grow text-primary text-center" role="status" style='display:none;font-size:3em' id='loader'>
+			<span class="visually-hidden">กำลังดาวน์โหลด...</span>
+		</div>
+		
+		<div class=""  id='hashshow' style='color:#2D3E50'>
+		</div> 
+		<br />
+		
+	</div>
+	<div class="col-md-2 d-none d-md-block">
+	</div>
+</div>
+<div class="row" >
+	<p>&nbsp;<span>{% csrf_token %}</span></p>
+</div>
+</div>
+
+<div class="row" style='margin-top:3em;background-color:#F5FAFB'>
+	<div class="col-sm-2 d-none d-md-block">
+	</div> 
+	<div class="col-sm-8"  >
+	
+	
+
+
+    <main class="container">
+        <!-- 介绍部分 -->
+        <section class="intro-section">
+            <h2>📖 แนะนำผลิตภัณฑ์</h2>
+            <p>ตัวดาวน์โหลดวิดีโอ Flickr เป็นเครื่องมือออนไลน์ที่ออกแบบมาโดยเฉพาะสำหรับผู้ใช้ Flickr ไม่ต้องติดตั้งซอฟต์แวร์หรือสมัครบัญชี คุณสามารถดาวน์โหลดเนื้อหาวิดีโอที่ยอดเยี่ยมบน Flickr ได้อย่างง่ายดาย</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>ดาวน์โหลดสุดเร็ว</h3>
+                    <p>ใช้เทคโนโลยีการดาวน์โหลดล่าสุดเพื่อให้แน่ใจว่าความเร็วในการดาวน์โหลดวิดีโอเร็วกว่าคนอื่น</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>ความปลอดภัยและความเป็นส่วนตัว</h3>
+                    <p>เข้ารหัส HTTPS ตลอดทั้งกระบวนการ ไม่บันทึกข้อมูลผู้ใช้ ปกป้องความปลอดภัยและความเป็นส่วนตัวของคุณ</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>สนับสนุนข้ามแพลตฟอร์ม</h3>
+                    <p>รองรับอย่างสมบูรณ์แบบ PC โทรศัพท์มือถือ แท็บเล็ต และอุปกรณ์อื่น ๆ ดาวน์โหลดได้ทุกที่ทุกเวลา</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>ใช้งานง่าย</h3>
+                    <p>เพียงสามขั้นตอนก็สามารถดาวน์โหลดได้สำเร็จ ไม่จำเป็นต้องมีพื้นหลังทางเทคนิค เหมาะสำหรับทุกเพศทุกวัย</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 คำแนะนำที่เป็นมิตร</h4>
+                <p>เครื่องมือนี้ใช้ได้ฟรีอย่างสมบูรณ์ ไม่จำกัดจำนวนการดาวน์โหลด โปรดใช้อย่างเหมาะสม เคารพลิขสิทธิ์และผลงานของผู้สร้างต้นฉบับ</p>
+            </div>
+        </section>
+
+        <!-- 使用教程 -->
+        <section class="tutorial-section">
+            <h2>📝 วิธีใช้</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>ค้นหาวิดีโอ Flickr ที่คุณต้องการดาวน์โหลด</h3>
+                    <p>ก่อนอื่น เข้าไปที่ <a href="https://www.flickr.com " target="_blank">Flickr.com</a> และค้นหาวิดีโอที่คุณต้องการดาวน์โหลด คุณสามารถใช้ฟังก์ชั่นค้นหาหรือเรียกดูอัลบั้มเพื่อค้นหาวิดีโอได้</p>
+                    <div class="screenshot">
+                        
+                        <p><em>รูปที่ 1: ตัวอย่างหน้าเล่นวิดีโอ Flickr</em></p>
+                    </div>
+                    <div class="warning-box">
+                        <h4>⚠️ สิ่งที่ควรสังเกต</h4>
+                        <p>โปรดตรวจสอบให้แน่ใจว่าวิดีโอสามารถมองเห็นได้สาธารณะ วิดีโอส่วนตัวไม่สามารถดาวน์โหลดได้ ในขณะเดียวกันโปรดเคารพลิขสิทธิ์ของผู้สร้างวิดีโอและดาวน์โหลดเฉพาะเนื้อหาที่ได้รับอนุญาตเท่านั้น</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>คัดลอก URL ของหน้าวิดีโอ</h3>
+                    <p>ในหน้าเล่นวิดีโอ คัดลอกลิงก์ URL ทั้งหมดจากแถบที่อยู่ของเบราว์เซอร์ รูปแบบ URL มักจะเป็น:</p>
+                    <ul>
+                        <li><code class="highlight">https://www.flickr.com/photos/username/123456789 </code></li>
+                        <li><code class="highlight">https://flic.kr/p/abc123 </code></li>
+                    </ul>
+                    <div class="screenshot">
+                       
+                        <p><em>รูปที่ 2: คัดลอก URL วิดีโอจากแถบที่อยู่ของเบราว์เซอร์</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 提示เล็กน้อย</h4>
+                        <p>บน PC: คลิกที่แถบที่อยู่แล้วกด Ctrl+C (Windows) หรือ Cmd+C (Mac) เพื่อคัดลอก<br/>
+                        บนโทรศัพท์: แตะค้างที่แถบที่อยู่แล้วเลือกตัวเลือก "คัดลอก"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>วาง URL ในช่องดาวน์โหลด</h3>
+                    <p>กลับไปที่หน้านี้ วาง URL วิดีโอ Flickr ที่คัดลอกมาในช่องดาวน์โหลดด้านล่าง:</p>
+                    <div class="screenshot">
+                       
+                        <p><em>รูปที่ 3: วาง URL วิดีโอ Flickr ในช่อง</em></p>
+                    </div>
+
+                    <p style="margin-top: 10px;">รองรับรูปแบบลิงก์วิดีโอ Flickr ทั้งหมด การรับรู้และสกัดข้อมูลวิดีโอโดยอัตโนมัติ</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>เลือกคุณภาพวิดีโอและดาวน์โหลด</h3>
+                    <p>ระบบจะวิเคราะห์วิดีโอโดยอัตโนมัติและให้ตัวเลือกคุณภาพต่างๆ:</p>
+                    <ul>
+                        <li><strong>HD (ความละเอียดสูง):</strong> ภาพคมชัดที่สุด ไฟล์ขนาดใหญ่</li>
+                        <li><strong>SD (ความละเอียดมาตรฐาน):</strong> สมดุลระหว่างภาพคมชัดและขนาดไฟล์</li>
+                        <li><strong>FLU (ลื่นไหล):</strong> ไฟล์เล็กที่สุด เหมาะสำหรับอุปกรณ์เคลื่อนที่</li>
+                    </ul>
+                    <div class="screenshot">
+                      
+                        <p><em>รูปที่ 4: เลือกตัวเลือกคุณภาพวิดีโอที่เหมาะสม</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 ข้อเสนอแนะ</h4>
+                        <p>หากต้องการแก้ไขหรือเก็บสะสม แนะนำให้เลือกคุณภาพ HD; หากต้องการแบ่งปันอย่างรวดเร็วหรือดูบนอุปกรณ์เคลื่อนที่ คุณภาพ SD หรือ FLU เหมาะสมกว่า</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>บันทึกวิดีโอลงในอุปกรณ์ของคุณ</h3>
+                    <p>หลังจากคลิกปุ่มดาวน์โหลด ตามการตั้งค่าเบราว์เซอร์ของคุณ:</p>
+                    <ul>
+                        <li><strong>ผู้ใช้ PC:</strong> เลือกตำแหน่งที่ตั้งและคลิก "บันทึก"</li>
+                        <li><strong>ผู้ใช้โทรศัพท์:</strong> วิดีโอจะถูกบันทึกลงในอัลบั้มหรือโฟลเดอร์ดาวน์โหลด</li>
+                    </ul>
+                    <div class="screenshot">
+                      
+                        <p><em>รูปที่ 5: เลือกตำแหน่งที่ตั้งและเสร็จสิ้นการดาวน์โหลด</em></p>
+                    </div>
+                    <div class="tip-box">
+                        <h4>💡 การดำเนินการหลังจากดาวน์โหลดเสร็จสิ้น</h4>
+                        <p>หลังจากดาวน์โหลดเสร็จสิ้น คุณสามารถดูด้วยเครื่องเล่นวิดีโอใดก็ได้ หรือนำเข้าไปยังซอฟต์แวร์ตัดต่อวิดีโอเพื่อสร้างสรรค์ผลงานครั้งที่สอง</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 常见问题 -->
+        <section class="faq-section">
+            <h2>❓ คำถามที่พบบ่อย</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: การดาวน์โหลดวิดีโอ Flickr ถูกกฎหมายหรือไม่?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: ความถูกต้องตามกฎหมายขึ้นอยู่กับลิขสิทธิ์ของวิดีโอ เครื่องมือนี้ใช้สำหรับการใช้งานส่วนตัว การเรียนรู้ และการสำรองข้อมูลเท่านั้น โปรดปฏิบัติตามหลักการต่อไปนี้:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>ดาวน์โหลดเฉพาะวิดีโอสาธารณะที่คุณมีสิทธิ์เข้าถึงเท่านั้น</li>
+                            <li>ไม่ใช้เพื่อการค้า</li>
+                            <li>เคารพลิขสิทธิ์ของผู้สร้างต้นฉบับ</li>
+                            <li>ปฏิบัติตามข้อกำหนดการให้บริการของ Flickr</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: ทำไมบางวิดีโอถึงดาวน์โหลดไม่ได้?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: เหตุผลที่เป็นไปได้รวมถึง:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>วิดีโอตั้งเป็นส่วนตัวหรือป้องกันด้วยรหัสผ่าน</li>
+                            <li>วิดีโอถูกลบหรือลิงก์หมดอายุ</li>
+                            <li>การเชื่อมต่อเครือข่ายไม่เสถียร</li>
+                            <li>เว็บไซต์ Flickr อยู่ในช่วงการบำรุงรักษาชั่วคราว</li>
+                        </ul>
+                        <p style="margin-top: 10px;">คำแนะนำ: ตรวจสอบว่าลิงก์วิดีโอถูกต้องหรือไม่ ตรวจสอบให้แน่ใจว่าการเชื่อมต่อเครือข่ายปกติ หรือลองอีกครั้งในภายหลัง</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: วิดีโอที่ดาวน์โหลดมามีลายน้ำหรือไม่?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: ไม่ เครื่องมือนี้ดาวน์โหลดไฟล์วิดีโอต้นฉบับโดยตรงจาก Flickr โดยไม่ต้องเพิ่มลายน้ำหรือเครื่องหมายใดๆ ลงในวิดีโอ คุณจะได้รับคุณภาพวิดีโอที่เหมือนกับที่เห็นบน Flickr
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: สนับสนุนการดาวน์โหลดเป็นชุดหรือไม่?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: เวอร์ชันปัจจุบันยังไม่รองรับฟังก์ชันการดาวน์โหลดเป็นชุด คุณต้องคัดลอกลิงก์วิดีโอทีละรายการเพื่อดาวน์โหลด ฟังก์ชันการดาวน์โหลดเป็นชุดอยู่ระหว่างการพัฒนา โปรดติดตาม!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: วิดีโอที่ดาวน์โหลดมาเป็นรูปแบบใด?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: วิดีโอ Flickr มักจัดให้ในรูปแบบต่อไปนี้:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>รูปแบบ MP4:</strong> ใช้บ่อยที่สุด เข้ากันได้ดีที่สุด</li>
+                            <li><strong>รูปแบบ MOV:</strong> วิดีโอความละเอียดสูงบางรายการอาจอยู่ในรูปแบบนี้</li>
+                            <li><strong>รูปแบบ FLV:</strong> วิดีโอเก่ากว่าอาจอยู่ในรูปแบบนี้</li>
+                        </ul>
+                        <p style="margin-top: 10px;">เมื่อดาวน์โหลด เราจะเลือกรูปแบบที่เหมาะสมที่สุดโดยอัตโนมัติเพื่อให้แน่ใจว่าสามารถเล่นได้บนอุปกรณ์ต่างๆ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsible" onclick="toggleFaq(this)">
+                    Q: ทำอย่างไรถ้าความเร็วในการดาวน์โหลดช้า?
+                </div>
+                <div class="collapsible-content">
+                    <div class="faq-answer">
+                        A: ความเร็วในการดาวน์โหลดอาจได้รับผลกระทบจากปัจจัยต่อไปนี้:<br/>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>ความเร็วการเชื่อมต่อเครือข่ายของคุณ</li>
+                            <li>สถานการณ์โหลดเซิร์ฟเวอร์ Flickr</li>
+                            <li>ขนาดไฟล์วิดีโอ</li>
+                            <li>จำนวนงานดาวน์โหลดที่ดำเนินการพร้อมกัน</li>
+                        </ul>
+                        <p style="margin-top: 10px;">คำแนะนำ: เลือกคุณภาพวิดีโอที่ต่ำกว่า หรือดาวน์โหลดเมื่อสภาพเครือข่ายดีขึ้น</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用条款 -->
+        <section class="tutorial-section">
+            <h2>📋 ข้อกำหนดการใช้งาน</h2>
+            <p>การใช้เครื่องมือนี้แสดงว่าคุณยอมรับข้อกำหนดต่อไปนี้:</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>เครื่องมือนี้ใช้สำหรับการใช้งานส่วนตัวที่ไม่ใช่เชิงพาณิชย์เท่านั้น</li>
+                <li>ผู้ใช้ต้องรับผิดชอบในการรับรองความถูกต้องตามกฎหมายของเนื้อหาที่ดาวน์โหลด</li>
+                <li>เราไม่เก็บบันทึกการดาวน์โหลดหรือข้อมูลผู้ใช้ใดๆ</li>
+                <li>บริการอาจได้รับการปรับเปลี่ยนได้ตลอดเวลาเนื่องจากการบำรุงรักษาหรือการเปลี่ยนแปลงนโยบาย</li>
+                <li>เราไม่รับผิดชอบต่อปัญหาทางกฎหมายที่เกิดจากการใช้งานที่ไม่เหมาะสม</li>
+            </ul>
+            <div class="warning-box">
+                <h4>⚠️ คำประกาศเกี่ยวกับความรับผิดชอบ</h4>
+                <p>เครื่องมือนี้มีจุดมุ่งหมายเพื่อช่วยให้ผู้ใช้สำรองข้อมูลเนื้อหาของตนเองหรือดาวน์โหลดวิดีโอสาธารณะที่ได้รับอนุญาต การละเมิดลิขสิทธิ์ใดๆ ไม่เกี่ยวข้องกับเครื่องมือนี้ โปรดใช้อย่างถูกกฎหมาย</p>
+            </div>
+        </section>
+
+        <!-- 联系信息 -->
+        <section class="tutorial-section">
+            <h2>📞 ติดต่อเรา</h2>
+            <p>หากมีปัญหาหรือข้อเสนอแนะ โปรดติดต่อเราผ่านช่องทางต่อไปนี้:</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>📧 อีเมล：<a href="{{mailtocontactmail}}">{{contactmail}}</a></li>
+                <li>💬 บริการลูกค้าออนไลน์：วันทำการ 9:00-18:00 น.</li>
+                <li>📱 WeChat：FlickrVideoDownloader</li>
+                <li>🐛 ข้อเสนอแนะปัญหา：<a href="#" onclick="alert('反馈功能开发中，请使用邮箱联系我们')">ส่งรายงานปัญหา</a></li>
+            </ul>
+            <div class="tip-box">
+                <h4>💡 เราให้ความสำคัญกับข้อเสนอแนะของคุณ</h4>
+                <p>ความคิดเห็นและข้อเสนอแนะของคุณเป็นพลังขับเคลื่อนการปรับปรุงของเรา หากมีความคิดใดๆ ยินดีรับฟังเสมอ!</p>
+            </div>
+        </section>
+    </main>
+
+	<footer class="footer">
+				<p>© {{year_string}} Flickr Video Downloader. สงวนลิขสิทธิ์ทุกประการ</p>
+				<p>เว็บไซต์นี้ไม่มีความเกี่ยวข้องอย่างเป็นทางการกับ Flickr, Inc. | 
+				<a href="/privacy-policy" style="color: white;">นโยบายความเป็นส่วนตัว</a> | 
+				<a href="/terms-of-service" style="color: white;">ข้อกำหนดการใช้งาน</a> | 
+				<a href="/about-us" style="color: white;">เกี่ยวกับเรา</a> | 
+				<a href="/contact-us" style="color: white;">ติดต่อเรา</a>
+				</p>
+				<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+					เครื่องมือนี้จัดทำขึ้นเพื่อการศึกษาและการวิจัยส่วนบุคคลเท่านั้น ผู้ใช้ต้องเป็นผู้รับผิดชอบทางกฎหมายทั้งหมดด้วยตนเอง
+				</p>
+				<p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">
+					การดาวน์โหลดเนื้อหาที่มีลิขสิทธิ์อาจเป็นการละเมิดกฎหมายและข้อบังคับที่เกี่ยวข้อง โปรดปฏิบัติตามกฎหมายในท้องถิ่นของคุณ
+				</p>
+				<div id='fp' fp style='display:none'></div> 
+		</footer>
+	
+
+	
+
+	</div>
+	<div class="col-sm-2 d-none d-md-block">
+	</div>
+</div>
+</div>
+<script src="/static/jquery.min.js"  crossorigin="anonymous"></script>
+<script src="/static/popper.min.js"  crossorigin="anonymous"></script>
+
+<script data-ad-client="ca-pub-3339068484857413" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="/static/jquery.lazy.min.js"></script>
+{{thumbjsele|safe}}
+<script type="text/javascript" src="/static/shareon.iife.js" defer  init></script>
+<script>
+	$(function() {
+		$('.lazy').Lazy();
+	});
+</script>
+<script type="application/ld+json">
+	{
+	"@context": "http://schema.org/",
+	"@type": "Organization",
+	"url": "https://twittervideodownloaderx.com",
+	"logo": "https://twittervideodownloaderx.com/static/logo.png"
+	}
+</script>
+
+<script>
+     // FAQ折叠功能
+     function toggleFaq(element) {
+         const content = element.nextElementSibling;
+         element.classList.toggle('active');
+         content.classList.toggle('active');
+     }
+     // 响应式导航菜单（移动端）
+     function toggleMobileMenu() {
+         const menu = document.querySelector('.mobile-menu');
+         menu.classList.toggle('active');
+     }
+</script>
+
+
+<script>
+function mp3turn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#mp3placeholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#mp3placeholder').append(spinner+'<br />Converting Video to Mp3</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getmp3', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#mp3placeholder').html('NO result');
+				return;
+				}
+			var mp3filepath=response.mp3filepath;
+			//alert(htimage);
+			$('#mp3placeholder').empty();
+			var intext='';
+			var intext='<a href="/'+mp3filepath+'" target="_blank" class="btn btn-danger">Download Video Mp3</a>';
+			$('#mp3placeholder').html(intext);
+			}
+		else{
+			$('#mp3placeholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+function gifturn(obj){
+	var inputvalue =obj.getAttribute('va');
+	//alert(inputvalue);
+	if (inputvalue==='')
+	{
+		alert('456');
+		return false;
+	}
+	$('#gifplaceholder').empty();
+	var spinner='<span style="font-size:1.5em"><span class="spinner-loader" ></span>';
+	$('#gifplaceholder').append(spinner+'<br />Converting Video to Gif</span>');
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getgif', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#gifplaceholder').html('NO result');
+				return;
+				}
+			var giffilepath=response.giffilepath;
+			//alert(htimage);
+			$('#gifplaceholder').empty();
+			var intext='';
+			var intext='<a href="/'+giffilepath+'" target="_blank" class="btn btn-danger">Download Video GIF</a>';
+			$('#gifplaceholder').html(intext);
+			}
+		else{
+			$('#gifplaceholder').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+};
+$(document).ready(function() {
+$("#mainsource").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#bigbutton").click();
+    }
+});
+$('#bigbutton').on('click',function(){
+	var inputvalue = $('#mainsource').val();
+	if (inputvalue==='')
+	{
+		return false;
+	}
+	$('#hashshow').empty();
+	var spinner='<div style="text-align:center;"><span style="font-size:1.5em;"><span style="background-color:#007FFF;" class="spinner-loader" ></span>';
+	$('#hashshow').append(spinner+'<br />กำลังดึงข้อมูลวิดีโอ</span></div>');
+	
+	//document.getElementById("loader").style.display = "block";
+	var fp = $('#fp').attr("fp");
+	var xhr = new XMLHttpRequest();
+	var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+	xhr.open('post', '/getitem_flickr', true);
+	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	xhr.send('inputvalue='+inputvalue+'&fp='+fp);
+	xhr.onreadystatechange = processresponse;
+	function processresponse() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			// Everything is good, the response was received.
+		if (xhr.status === 200) {
+			// Perfect!
+			document.getElementById("loader").style.display = "none";
+			var rstring=xhr.responseText;
+			//alert(xhr.responseText);
+			var response = JSON.parse(rstring);
+			var statue=response.statue;
+			if (statue=='NO'){
+				$('#hashshow').html('NO result');
+				return;
+				}
+				
+				
+				
+				var v_thumbnail=encodeURI(response.v_thumbnail);//
+				
+				var v_title=response.v_title;//
+				var v_webpage_url=encodeURI(response.v_webpage_url);//
+				var v_duration_string=response.v_duration_string;//
+				
+				//var v_uploader_id=response.v_uploader_id;
+				//var v_uploader=response.v_uploader;
+				var v_uploader_url=encodeURI(response.v_uploader_url);//
+				var v_view_count=response.v_view_count;//
+				//var v_like_count=response.v_like_count;
+				var v_comment_count=response.v_comment_count;//
+				//var v_repost_count=response.v_repost_count;
+				//var v_width=response.v_width;
+				//var v_height=response.v_height;
+				
+				var v_upload_date=response.v_upload_date;//
+				var v_ext=response.v_ext;//
+				var v_resolution=response.v_resolution;//
+				//var v_aspect_ratio=response.v_aspect_ratio;
+				var v_des=response.v_des;//
+				//var v_url=response.v_url;
+				
+				var v_formats = response.formatslist;//
+				//var v_thumbnails =response.thumbnailslist;
+			
+
+			$('#hashshow').empty();
+			var intext='';
+			var intext=intext+'<div class="row" ><div class="col-sm-6" ><div><b>'+v_title+'</b></div><div><img src="'+v_thumbnail+'"  class="img-fluid" /></div>';
+			
+
+			var intext=intext+'</div><div class="col-sm-6 align-self-end" ><br /><br />';
+			
+			//var intext=intext+'<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="'+v_url+'">下载视频</a></div>';
+			
+			for (let i = 0; i < v_formats.length; i++) {
+					turl = encodeURI(v_formats[i][0]);
+					tres = v_formats[i][1];
+					// แปล: ดาวน์โหลดวิดีโอ (ความละเอียด ...)
+					var intext = intext + '<div><i class="bi bi-cloud-download"></i> <a style="text-decoration:none" href="' + turl + '">ดาวน์โหลดวิดีโอ (ความละเอียด ' + tres + ')</a></div>';
+				}
+				
+				// ส่วนของรูปหน้าปก (หากเปิดใช้งาน):
+				// var intext=intext+'<br />'
+				// for (let i = 0; i < v_thumbnails.length; i++) {
+				//    turl=encodeURI(v_thumbnails[i][0]);
+				//    tres=v_thumbnails[i][1];
+				//    var intext=intext+'<div><i class="bi bi-file-image"></i> <a style="text-decoration:none" href="'+turl+'">ดาวน์โหลดรูปหน้าปก (ความละเอียด '+tres+')</a></div>';
+				// }
+				
+				var intext = intext + '</div></div><hr />';
+				
+				// คอลัมน์ที่ 1: ข้อมูลพื้นฐาน
+				var intext = intext + '<div class="row" ><div class="col-sm-6" >' +
+					'<div><b>หัวข้อ: </b>' + v_title + '</div>' +
+					'<div><b>ลิงก์หน้าเว็บ: </b>' + v_webpage_url + '</div>' +
+					'<div><b>ความยาว: </b>' + v_duration_string + '</div>' +
+					'<div><b>ลิงก์ผู้ อัปโหลด: </b>' + v_uploader_url + '</div>' +
+					'<div><b>วันที่อัปโหลด: </b>' + v_upload_date + '</div>' +
+					'<div><b>จำนวนการเข้าชม: </b>' + v_view_count + '</div></div>';
+				
+				// คอลัมน์ที่ 2: รายละเอียดทางเทคนิค
+				var intext = intext + '<div class="col-sm-6" >' +
+					'<div><b>จำนวนความคิดเห็น: </b>' + v_comment_count + '</div>' +
+					'<div><b>นามสกุลไฟล์: </b>' + v_ext + '</div>' +
+					'<div><b>ความละเอียด: </b>' + v_resolution + '</div></div></div>';
+				
+				// คำอธิบายวิดีโอ
+				var intext = intext + '<div class="row" ><div class="col-sm-12" ><div><b>คำอธิบายวิดีโอ: </b>' + v_des + '</div></div></div>';
+
+
+			var intext=intext+'<div class="row" >'+'<div class="shareon shadow bg-light bg-gradient"><a class="facebook" data-title="'+v_title+'" ><span  style="font-size:1em">facebook</span></a><a class="linkedin" data-title="'+v_title+'" ><span style="font-size:1em">linkedin</span></a>	<a class="mastodon" data-title="'+v_title+'"><span  style="font-size:1em">mastodon</span></a><a class="messenger" data-fb-app-id="0123456789012345" data-title="'+v_title+'"><span  style="font-size:1em">messenger</span></a><a class="Flickr " data-title="'+v_title+'"><span  style="font-size:1em“>Flickr </span></a><a class="reddit" data-title="'+v_title+'"><span  style="font-size:0.5em">reddit</span></a><a class="telegram" data-title="'+v_title+'"><span  style="font-size:1em">telegram</span></a><a class="twitter" data-title="'+v_title+'"><span  style="font-size:1em“>twitter</span></a><a class="viber" data-title="'+v_title+'"><span  style="font-size:1em">viber</span></a><a class="vkontakte" data-title="'+v_title+'"><span  style="font-size:1em">vkontakte</span></a><a class="whatsapp" data-title="'+v_title+'"><span  style="font-size:1em">whatsapp</span></a></div>';
+			
+			
+			var intext=intext+'</div>';
+			
+			//$('#hashshow').append('<div>'+'<img src="'+htsimage+'" />'+'</div>'+'<p>'+trunttext+'</p>');
+			$('#hashshow').html(intext);
+			}
+		else{
+			document.getElementById("loader").style.display = "none";
+			$('#hashshow').html('<p style="font-size:1.5em">NO result</p>');
+		}
+		}
+	}
+});
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.droplang').click(function(e) {
+    e.preventDefault();
+    var selectedValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	if (selectedValue==='en')
+	{
+		window.location=domainname+'/{{baseurlstring}}';
+	}
+	else
+	{
+	window.location=domainname+'/{{baseurlstring}}_'+selectedValue;
+	}
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.droptool').click(function(e) {
+    e.preventDefault();
+    var selectedtoolValue = $(this).data('value');
+	var domainname='https://twittervideodownloaderx.com';
+	var current_lang='{{lang}}';
+	
+	if (selectedtoolValue==='x_twitter')
+	{
+		if (current_lang==='en')
+			{
+			window.location=domainname;
+			}
+		else
+			{
+			window.location=domainname+'/'+current_lang;
+			}
+	}
+	else
+	{
+		if (current_lang==='en')
+		
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader';
+			}
+		else
+			{
+			window.location=domainname+'/'+selectedtoolValue+'_downloader_'+'{{lang}}';
+			}
+	}
+  });
+});
+</script>
+<script type="text/javascript">
+var sc_project=11698515; 
+var sc_invisible=1; 
+var sc_security="38970939"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+
+<link  rel="stylesheet" href='/static/wait.css' >
+</body>
+</html>
